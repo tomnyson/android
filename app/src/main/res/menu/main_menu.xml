@@ -15,14 +15,15 @@
      android:title="@string/menu3"
 
      />
- <item
-     android:id="@+id/menu3"
-     android:title="@string/menu3"
 
-     />
  <item
      android:id="@+id/menu4"
      android:title="@string/menu4"
+
+     />
+ <item
+     android:id="@+id/menu5"
+     android:title="@string/menu5"
 
      />
 </menu>

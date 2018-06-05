@@ -62,7 +62,7 @@ public class GalleryPreview extends AppCompatActivity {
 
             Intent intent= new Intent(getApplicationContext(), slideshowActivity.class);
             //intent.putExtra("data", value); //pass data
-            Toast.makeText(getApplicationContext(),"Show image",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"Show image",Toast.LENGTH_SHORT).show();
             startActivity(intent);
 
 
@@ -72,7 +72,8 @@ public class GalleryPreview extends AppCompatActivity {
 
             Intent intent= new Intent(getApplicationContext(), BasicMapDemoActivity.class);
             //intent.putExtra("data", value); //pass data
-            Toast.makeText(getApplicationContext(),"show map",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"show map",Toast.LENGTH_SHORT).show();
+            intent.putExtra("data", path); //pass data
             startActivity(intent);
 
 
@@ -83,6 +84,13 @@ public class GalleryPreview extends AppCompatActivity {
 
             Bitmap bitmap = BitmapFactory.decodeFile(path);
             setWallPaper(bitmap);
+            return true;
+        }
+        if(id == R.id.menu5) {
+            Intent intent= new Intent(getApplicationContext(), FilterActivity.class);
+            intent.putExtra("data", path); //pass data
+            startActivity(intent);
+
             return true;
         }
 

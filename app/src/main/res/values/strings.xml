@@ -5,6 +5,7 @@
     <string name="menu2">slideshow</string>
     <string name="menu3">show map</string>
     <string name="menu4">set WallPaper</string>
+    <string name="menu5">filter image</string>
     <string name="label_sample">sample</string>
     <string name="label_aspect_ratio">Aspect ratio</string>
     <string name="label_dynamic">Dynamic</string>
@@ -48,4 +49,6 @@
     <string name="file_provider_authorities">com.yalantis.ucrop.provider</string>
     <string name="channel_name">ucrop_chanel</string>
     <string name="channel_description">ucrop result image</string>
+    <string name="select_image">Select an image</string>
+    <string name="restore">Restore</string>
 </resources>
