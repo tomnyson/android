@@ -1,6 +1,9 @@
 package com.example.truonghaophu.doan;
 
+import android.app.WallpaperManager;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +16,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 import java.io.File;
+import java.io.IOException;
 
 public class GalleryPreview extends AppCompatActivity {
     Toolbar toolbar;
@@ -64,6 +68,23 @@ public class GalleryPreview extends AppCompatActivity {
 
             return true;
         }
+        if(id == R.id.menu3) {
+
+            Intent intent= new Intent(getApplicationContext(), BasicMapDemoActivity.class);
+            //intent.putExtra("data", value); //pass data
+            Toast.makeText(getApplicationContext(),"show map",Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+
+
+            return true;
+        }
+        if(id == R.id.menu4) {
+
+
+            Bitmap bitmap = BitmapFactory.decodeFile(path);
+            setWallPaper(bitmap);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -86,4 +107,13 @@ public class GalleryPreview extends AppCompatActivity {
         startActivity(Intent.createChooser(share, "Share Image!"));
     }
 
+    public  void setWallPaper(Bitmap bmpImg) {
+        WallpaperManager wallManager = WallpaperManager.getInstance(getApplicationContext());
+        try {
+            wallManager.setBitmap(bmpImg);
+            Toast.makeText(getApplicationContext(), "Wallpaper Set Successfully!!", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            Toast.makeText(getApplicationContext(), "Setting WallPaper Failed!!", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

@@ -2,7 +2,9 @@
     <string name="app_name">Gallery App</string>
     <string name="toolbarTitle">toolbarTitle</string>
     <string name="menu1">share</string>
-    <string name="menu2">crop</string>
+    <string name="menu2">slideshow</string>
+    <string name="menu3">show map</string>
+    <string name="menu4">set WallPaper</string>
     <string name="label_sample">sample</string>
     <string name="label_aspect_ratio">Aspect ratio</string>
     <string name="label_dynamic">Dynamic</string>
