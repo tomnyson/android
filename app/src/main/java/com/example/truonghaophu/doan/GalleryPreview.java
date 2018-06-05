@@ -8,14 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.io.File;
 
-/**
- * Created by SHAJIB on 25/12/2015.
- */
 public class GalleryPreview extends AppCompatActivity {
     Toolbar toolbar;
 
@@ -58,7 +56,10 @@ public class GalleryPreview extends AppCompatActivity {
         }
         if(id == R.id.menu2) {
 
-
+            Intent intent= new Intent(getApplicationContext(), slideshowActivity.class);
+            //intent.putExtra("data", value); //pass data
+            Toast.makeText(getApplicationContext(),"Show image",Toast.LENGTH_SHORT).show();
+            startActivity(intent);
 
 
             return true;
